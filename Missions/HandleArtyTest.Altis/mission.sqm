@@ -1,0 +1,253 @@
+version=53;
+class EditorData
+{
+	moveGridStep=1;
+	angleGridStep=0.2617994;
+	scaleGridStep=1;
+	autoGroupingDist=10;
+	toggles=1;
+	class ItemIDProvider
+	{
+		nextID=14;
+	};
+	class MarkerIDProvider
+	{
+		nextID=1;
+	};
+	class Camera
+	{
+		pos[]={25444.898,17.214672,20327.771};
+		dir[]={0.066161379,-0.83552247,0.54547703};
+		up[]={0.1006045,0.54944897,0.82944733};
+		aside[]={0.99273574,-1.3271347e-008,-0.12041};
+	};
+};
+binarizationWanted=0;
+addons[]=
+{
+	"A3_Ui_F",
+	"A3_Characters_F",
+	"A3_Static_F_Mortar_01"
+};
+class AddonsMetaData
+{
+	class List
+	{
+		items=3;
+		class Item0
+		{
+			className="A3_Ui_F";
+			name="Arma 3 - User Interface";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item1
+		{
+			className="A3_Characters_F";
+			name="Arma 3 Alpha - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item2
+		{
+			className="A3_Static_F";
+			name="Arma 3 Alpha - Turrets";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+	};
+};
+randomSeed=16366879;
+class ScenarioData
+{
+	author="Rockhount";
+};
+class Mission
+{
+	class Intel
+	{
+		timeOfChanges=1800.0002;
+		startWeather=0.30000001;
+		startWind=0.1;
+		startWaves=0.1;
+		forecastWeather=0.30000001;
+		forecastWind=0.1;
+		forecastWaves=0.1;
+		forecastLightnings=0.1;
+		year=2035;
+		month=6;
+		day=24;
+		hour=12;
+		minute=0;
+		startFogDecay=0.013;
+		forecastFogDecay=0.013;
+	};
+	class Entities
+	{
+		items=5;
+		class Item0
+		{
+			dataType="Trigger";
+			position[]={25429.951,9.8222246,20348.215};
+			class Attributes
+			{
+				name="Test";
+				text="Test";
+				onActivation="Player setPos [27674,21132,0];Player setDir 220;";
+				activationBy="ALPHA";
+			};
+			id=5;
+			type="EmptyDetectorAreaR50";
+		};
+		class Item1
+		{
+			dataType="Marker";
+			position[]={27574,0,21004};
+			name="marker_0";
+			type="mil_objective";
+			id=6;
+			atlOffset=-11.970669;
+		};
+		class Item2
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25443.842,9.9595909,20331.195};
+					};
+					side="West";
+					flags=7;
+					class Attributes
+					{
+						isPlayer=1;
+					};
+					id=10;
+					type="B_officer_F";
+					atlOffset=-0.001999855;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="speaker";
+							expression="_this setspeaker _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"STRING"
+										};
+									};
+									value="Male01ENG";
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="pitch";
+							expression="_this setpitch _value;";
+							class Value
+							{
+								class data
+								{
+									class type
+									{
+										type[]=
+										{
+											"SCALAR"
+										};
+									};
+									value=1.03;
+								};
+							};
+						};
+						nAttributes=2;
+					};
+				};
+			};
+			class Attributes
+			{
+			};
+			id=9;
+			atlOffset=-0.001999855;
+		};
+		class Item3
+		{
+			dataType="Group";
+			side="West";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={25445.027,9.9159851,20336.223};
+						angles[]={0.013334315,0,0.0066671576};
+					};
+					side="West";
+					flags=6;
+					class Attributes
+					{
+					};
+					id=13;
+					type="B_Soldier_F";
+				};
+			};
+			class Attributes
+			{
+			};
+			class CrewLinks
+			{
+				class LinkIDProvider
+				{
+					nextID=1;
+				};
+				class Links
+				{
+					items=1;
+					class Item0
+					{
+						linkID=0;
+						item0=13;
+						item1=12;
+						class CustomData
+						{
+							role=2;
+							turretPath[]={0};
+						};
+					};
+				};
+			};
+			id=11;
+		};
+		class Item4
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={25445.023,10.636097,20336.182};
+				angles[]={0.013334315,0,0.0066671576};
+			};
+			side="West";
+			flags=6;
+			class Attributes
+			{
+				init="call{nul=[this, [27574.4,21004.3,0], 30, ""auto"", 3, 6, 10, 1] execVM ""HandleArmA3Artillery.sqf"";}";
+			};
+			id=12;
+			type="B_Mortar_01_F";
+		};
+	};
+};
