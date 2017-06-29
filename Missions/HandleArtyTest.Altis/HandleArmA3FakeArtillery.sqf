@@ -54,7 +54,7 @@ if (isServer) then
 		for "_i2" from 1 to _Local_var_ShotCount do
 		{
 			_Local_var_CurPos = _Local_var_ArtiTargetPos getPos [random _Local_var_ArtiTargetRadius, random 360];
-			playSound3D [([(str missionConfigFile), 0, -15] call BIS_fnc_trimString) + "Sounds\incoming05.ogg", objNull, false, ATLToASL _Local_var_CurPos, 3, 1, 150];
+			playSound3D [([(str missionConfigFile), 0, -15] call BIS_fnc_trimString) + "Sounds\incoming.ogg", objNull, false, ATLToASL _Local_var_CurPos, 3, 1, 150];
 			sleep 1.5;
 			_Local_var_AmmoTypeToUse createVehicle _Local_var_CurPos;
 			sleep _Local_var_ShotSleepTime;
