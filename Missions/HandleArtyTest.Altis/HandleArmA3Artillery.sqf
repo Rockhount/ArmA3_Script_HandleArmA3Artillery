@@ -5,7 +5,7 @@
 	[S1, [1,1,0], 100, "8Rnd_82mm_Mo_shells", 3, 10, 20, 1] execVM "HandleArmA3Artillery.sqf";
 	S1 = Unit or vehicle, which will fire
 	[1,1,0] = Position, where to shoot at
-	100 = Radius of the shoot-area
+	100 = Radius of the impact-area
 	"8Rnd_82mm_Mo_shells" = Type of ammo to use (use "auto" to let it be chosen automatically)
 	3 = Count of rounds
 	10 = Count of shots per round
