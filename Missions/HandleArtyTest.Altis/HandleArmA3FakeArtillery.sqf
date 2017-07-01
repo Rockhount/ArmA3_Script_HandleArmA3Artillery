@@ -1,5 +1,5 @@
 /*
-	Made by Rockhount - HandleArmA3FakeArtillery Script v1.1 (SP/MP & HC compatible)
+	Made by Rockhount - HandleArmA3FakeArtillery Script v1.2 (SP/MP & HC compatible)
 	Errors will be written into the rpt and starts with "HandleArmA3FakeArtillery Error:"
 	Call:
 	[[1,1,0], 100, "R_80mm_HE", 3, 10, 20, 1, 30] execVM "HandleArmA3FakeArtillery.sqf";
@@ -12,7 +12,7 @@
 	1 = Time between Shots as seconds 
 	30 = Dealy for the first shot
 	-------------------------------------------------------------------------------------------------------------------------
-	Gemacht von Rockhount - HandleArmA3FakeArtillery Skript v1.1 (SP/MP & HC Kompatibel)
+	Gemacht von Rockhount - HandleArmA3FakeArtillery Skript v1.2 (SP/MP & HC Kompatibel)
 	Fehler werden in die RPT geschrieben und starten mit "HandleArmA3FakeArtillery Error:"
 	Aufruf:
 	[[1,1,0], 100, "R_80mm_HE", 3, 10, 20, 1, 30] execVM "HandleArmA3FakeArtillery.sqf";
@@ -29,14 +29,14 @@
 if (isServer) then
 {
 	private _Local_var_Exit = false;
-	private _Local_var_ArtiTargetPos = if ((count _this > 0) && {typeName (_this select 0) == "ARRAY"}) then {_this select 0} else {_Local_var_Exit = true};
-	private _Local_var_ArtiTargetRadius = if ((count _this > 1) && {typeName (_this select 1) == "SCALAR"}) then {_this select 1} else {_Local_var_Exit = true};
-	private _Local_var_AmmoTypeToUse = if ((count _this > 2) && {typeName (_this select 2) == "STRING"}) then {_this select 2} else {_Local_var_Exit = true};
-	private _Local_var_RoundCount = if ((count _this > 3) && {typeName (_this select 3) == "SCALAR"}) then {_this select 3} else {_Local_var_Exit = true};
-	private _Local_var_ShotCount = if ((count _this > 4) && {typeName (_this select 4) == "SCALAR"}) then {_this select 4} else {_Local_var_Exit = true};
-	private _Local_var_RoundSleepTime = if ((count _this > 5) && {typeName (_this select 5) == "SCALAR"}) then {_this select 5} else {_Local_var_Exit = true};
-	private _Local_var_ShotSleepTime = if ((count _this > 6) && {typeName (_this select 6) == "SCALAR"}) then {_this select 6} else {_Local_var_Exit = true};
-	private _Local_var_StartSleepTime = if ((count _this > 7) && {typeName (_this select 7) == "SCALAR"}) then {_this select 7} else {_Local_var_Exit = true};
+	private _Local_var_ArtiTargetPos = if ((count _this > 0) && {typeName (_this select 0) == "ARRAY"}) then {_this select 0} else {_Local_var_Exit = true;false};
+	private _Local_var_ArtiTargetRadius = if ((count _this > 1) && {typeName (_this select 1) == "SCALAR"}) then {_this select 1} else {_Local_var_Exit = true;false};
+	private _Local_var_AmmoTypeToUse = if ((count _this > 2) && {typeName (_this select 2) == "STRING"}) then {_this select 2} else {_Local_var_Exit = true;false};
+	private _Local_var_RoundCount = if ((count _this > 3) && {typeName (_this select 3) == "SCALAR"}) then {_this select 3} else {_Local_var_Exit = true;false};
+	private _Local_var_ShotCount = if ((count _this > 4) && {typeName (_this select 4) == "SCALAR"}) then {_this select 4} else {_Local_var_Exit = true;false};
+	private _Local_var_RoundSleepTime = if ((count _this > 5) && {typeName (_this select 5) == "SCALAR"}) then {_this select 5} else {_Local_var_Exit = true;false};
+	private _Local_var_ShotSleepTime = if ((count _this > 6) && {typeName (_this select 6) == "SCALAR"}) then {_this select 6} else {_Local_var_Exit = true;false};
+	private _Local_var_StartSleepTime = if ((count _this > 7) && {typeName (_this select 7) == "SCALAR"}) then {_this select 7} else {_Local_var_Exit = true;false};
 	//Error handling
 	if (_Local_var_Exit) exitWith
 	{
